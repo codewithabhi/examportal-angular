@@ -1,0 +1,33 @@
+.mrb3{
+    margin-bottom: 3px;
+}
+.mrb10{
+    margin-bottom: 10px;
+}
+.w30{
+    width: 30%;
+}
+.mr5{
+    margin: 5px;
+}
+.mr10{
+    margin: 10px;
+}
+.example-card {
+    width: 400px;
+    border: 10px gray;
+    background: lightblue;
+  }
+  .mat-card {
+    background: lightblue;
+  }
+  .example-header-image {
+    background-image: url('../../../../assets/categories.png');
+    background-size: cover;
+  }
+  .truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

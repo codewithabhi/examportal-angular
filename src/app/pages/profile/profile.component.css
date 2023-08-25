@@ -1,0 +1,13 @@
+.table{
+    width: 100%;
+    border: 0.5px gray solid;
+    border-collapse: collapse;
+}
+.table tr td{
+    padding: 20px 20px;
+    border: 0.5px gray solid;
+   
+}
+.mrtop{
+    margin-top: 5px;
+}

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.center{
+    text-align: center;
+    }
+.logo{
+    width: 100px;
+    height: 100x;
+}
+.full-width{
+    width: 100%;
+}
+.imagesrc{
+    max-width: 200px;
+    max-height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+}

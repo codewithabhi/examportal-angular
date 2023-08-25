@@ -1,0 +1,50 @@
+<mat-card>
+    <mat-card-header><h1>Add Quiz</h1></mat-card-header>
+    <mat-divider></mat-divider>
+<div class="container mrt10">
+    <div class="row">
+        <form (ngSubmit)="addQuiz()">
+        <div class="col-md-10 offset-md-2">
+            <mat-form-field class="w100">
+                <mat-label>Title</mat-label>
+                <input [(ngModel)]="quiz.title" class="w100" type="text" name="title" placeholder="Title" matInput/>
+            </mat-form-field>
+            <mat-form-field class="w100">
+                <mat-label>Description</mat-label>
+                <textarea [(ngModel)]="quiz.description"  name="description" placeholder="Description" matInput></textarea>
+            </mat-form-field>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field class="w100">
+                        <mat-label>MaxMarks</mat-label>
+                        <input [(ngModel)]="quiz.maxMarks" class="w100" type="text" name="maxMarks" placeholder="MaxMarks" matInput/>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field class="w100">
+                        <mat-label>No Of Questions</mat-label>
+                        <input  [(ngModel)]="quiz.noOfQuestions" class="w100" type="text" name="noOfQuestions" placeholder="No Of Ques" matInput/>
+                    </mat-form-field>
+                </div>
+                <div class="container">
+                <mat-slide-toggle color="primary" [(ngModel)]="quiz.active" name="active">Publish status!</mat-slide-toggle>
+            </div>
+            <div class="container mrt10 ">
+            <mat-form-field class="w100">
+                <mat-label >Category</mat-label>
+                <mat-select [(ngModel)]="quiz.category.cid"  name="cid">
+                  <mat-option  *ngFor="let c of categories" [value]="c.cid">
+                    {{c.title}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="container mrb10">
+            <button type="submit" mat-raised-button color="primary" class="center">Add</button>
+            </div>
+        </div>
+        </div>
+    </form>
+    </div>
+</div>
+</mat-card>

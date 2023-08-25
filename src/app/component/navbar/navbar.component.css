@@ -1,0 +1,18 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.mar20{
+    margin-right: 40px;
+}
+.pd5{
+ padding-right: 5%;
+}
+.pdl3{
+    padding-left: 2%;
+   }
+.marbt3{
+    margin-bottom: 3%;
+}
+.fix{
+    overflow: fixed;
+}

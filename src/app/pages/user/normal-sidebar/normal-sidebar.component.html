@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>
+            Menu
+        </div>
+        <button mat-list-item routerLink="/user"><mat-icon mat-list-icon>home</mat-icon> Home</button>
+        <button mat-list-item ><mat-icon mat-list-icon>account_circle</mat-icon> Profile</button>
+        <button mat-list-item routerLink="/user/load-quiz/0"><mat-icon mat-list-icon>quiz</mat-icon> All Quiz</button>
+        <button *ngFor="let c of category" mat-list-item [routerLink]="'/user/load-quiz/'+c.cid"><mat-icon mat-list-icon>category</mat-icon> {{c.title}}</button>
+        <!-- <button mat-list-item routerLink="/admin/category"><mat-icon mat-list-icon>category</mat-icon> Categories</button>
+        <button mat-list-item routerLink="/admin/category"><mat-icon mat-list-icon>category</mat-icon> Categories</button>
+        <button mat-list-item routerLink="/admin/profile"><mat-icon mat-list-icon>logout</mat-icon> Logout</button> -->
+    </mat-action-list>
+</mat-card>

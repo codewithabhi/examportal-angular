@@ -1,0 +1,29 @@
+<div class="marbt3 fix">
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_book</mat-icon>
+      </button>
+      <span>ExamPortal</span>
+      <span class="example-spacer"></span>
+      <div class="pd5">
+      <div *ngIf="!login.isLoggedIn()">
+      <a  [routerLink]="'/login'"   mat-icon-button  aria-label="Example home icon">
+        <!-- <mat-icon>SignUp</mat-icon> -->
+        <span>LogIn</span>
+      </a>
+       &nbsp;&nbsp;
+      <a   [routerLink]="'/signup'"   mat-icon-button aria-label="Example icon-button with share icon">
+        <span>SignUp</span>
+      </a> 
+    </div>
+    <a  class="mar20" *ngIf="login.isLoggedIn()" [routerLink]="'/admin/profile'"   mat-icon-button aria-label="Example icon-button with share icon">
+      {{firstname}}
+    </a>
+    &nbsp;&nbsp;
+      <a (click)="logout()" *ngIf="login.isLoggedIn()" [routerLink]="'/login'"   mat-icon-button aria-label="Example icon-button with share icon">
+        <span>Logout</span>
+      </a>
+    </div>
+    </mat-toolbar>
+</div>
+  

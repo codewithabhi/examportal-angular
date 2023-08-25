@@ -1,0 +1,45 @@
+<!-- <div class="bootstrap-wrapper"> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Read Instructions of this page Carefully</mat-card-title>
+                        <mat-card-subtitle>One more step to go</mat-card-subtitle>
+                        <mat-divider></mat-divider>
+                        
+                    </mat-card-header>
+                    <mat-card-content>
+                        <h1>{{quiz.title}}</h1>
+                        <p>{{quiz.description}}</p>
+                        <mat-divider></mat-divider>
+                        <h1>Important Instructions</h1>
+                        <ul>
+                            <li>This Quiz for practise purpose.</li>
+                            <li>You have to submit quiz within ({{quiz.noOfQuestions}}+1)"</li>
+                            <li>You can attempt the quiz any number of time.</li>
+                            <li>There are <b>{{quiz.noOfQuestions}}</b> Question in this Quiz.</li>
+                            <li>Each Question carries <b>{{quiz.maxMarks}}</b>. No negative marking for wrong questions.</li>
+                            <li>All Questions of MCQ types.</li>
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <h1>Attempting Quiz</h1>
+                        <ul>
+                            <li>Click <b>Start Quiz Button</b> to start the quiz</li>
+                            <li>The time will start the moment you click the start test button</li>
+                            <li>You cannot resume the quiz. If interrupted due to any reason.</li>
+                            <li>Click on next button to move next question</li>
+                            <li>Click on submit text button on completion of the quiz </li>
+                            <li>Result of the quiz is automatically generated in the form of PDF</li>
+                        </ul>
+                    </mat-card-content>
+                    <div class="center">
+                    <mat-card-actions >
+                        <button [routerLink]="'/start-quiz/'+quiz.qId" mat-raised-button color="primary" >Start Quiz</button> 
+                    </mat-card-actions>
+                </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

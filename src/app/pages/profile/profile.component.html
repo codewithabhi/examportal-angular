@@ -1,0 +1,56 @@
+<mat-card>
+    <h3 class="container"> Profile Details</h3>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container center">
+                <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" class="imagesrc">
+            </div>
+            <h2>{{user.firstname}} {{user.lastname}}</h2>
+           
+        </div>
+            <div class="container ">
+                <div class="row">
+                <div class="col-md-10 offset-md-1 " >
+                    <table class="center table">
+                       <tr >
+                        <td>UserName</td>
+                        <td>{{user.username}}</td>
+                       </tr>
+                       <tr>
+                        <td>UserId</td>
+                        <td>{{user.id}}</td>
+                       </tr>
+                       <tr>
+                        <td>FirstName</td>
+                        <td>{{user.firstname}}</td>
+                       </tr> 
+                       <tr>
+                        <td>LastName</td>
+                        <td>{{user.lastname}}</td>
+                       </tr> 
+                       <tr>
+                        <td>Phone No.</td>
+                        <td>{{user.phone}}</td>
+                       </tr> 
+                       <tr>
+                        <td>Email.</td>
+                        <td>{{user.email}}</td>
+                       </tr> 
+                       <tr>
+                        <td>Role</td>
+                        <td>{{user.authorities[0].authority}}</td>
+                       </tr>
+                    </table>
+                    <div class="center mrtop">
+                        <button type="submit"  mat-raised-button color="primary">Update</button>
+                        &nbsp;
+                        <button type="reset"  mat-raised-button color="accent">Share</button>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,17 @@
+.mt10{
+    margin-top: 10px;
+}
+.example-header-image {
+    background-image: url('../../../../assets/quiz.png');
+    background-size: cover;
+  }
+  button{
+    margin-left: 10px;
+  }
+  .mrb10{
+    margin-bottom: 10px;
+  }
+
+  .mrl10{
+    margin-left: 10px;
+  }

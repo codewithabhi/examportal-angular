@@ -1,0 +1,80 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="center col-md-6 offset-md-3">
+                <div class="">
+                    <img src="../../../assets/logo.png" class="logo">
+                </div>
+            <div><h2 class="">.... SignUp Here!! ....</h2></div>
+            <!-- {{User | json}} -->
+            <form (ngSubmit)="formSubmit()" class="example-form center">
+                <!-- <mat-form-field class="example-full-width">
+                  <mat-label>Favorite food</mat-label>
+                  <input matInput placeholder="Ex. Pizza" value="Sushi">
+                </mat-form-field> -->
+                <!-- firstName -->
+                <div>
+                <mat-form-field class="full-width"appearance="outline">
+                  <mat-label>First Name</mat-label>
+                  <input [(ngModel)]="User.firstname" name="firstname" matInput placeholder="Placeholder">
+                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                  <mat-hint>Don't enter full name.</mat-hint>
+                </mat-form-field>
+            </div>
+                <!-- Lastname -->
+                <div>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input [(ngModel)]="User.lastname" name="lastname" matInput placeholder="Placeholder">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    <!-- <mat-hint>Don't enter full name.</mat-hint> -->
+                  </mat-form-field>
+                  </div>
+                  <!-- username -->
+                  <div>
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>UserName</mat-label>
+                    <input [(ngModel)]="User.username" name="username" matInput placeholder="Placeholder">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    <mat-hint>Should be unique.</mat-hint>
+                  </mat-form-field>
+                  </div>
+                  <!-- password -->
+                  <div>
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input [(ngModel)]="User.password" name="password" matInput type="password">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    <!-- <mat-hint>Don't enter full name.</mat-hint> -->
+                  </mat-form-field>
+                  </div>
+                  <!-- email -->
+                  <div>
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>E-mail</mat-label>
+                    <input [(ngModel)]="User.email" name="email" matInput type="email" placeholder="Placeholder">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    <!-- <mat-hint>Don't enter full name.</mat-hint> -->
+                  </mat-form-field>
+                  </div>
+                  <!-- phone number -->
+                  <div>
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input [(ngModel)]="User.phone" name="phone" type="number" matInput placeholder="Placeholder">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    <!-- <mat-hint>Don't enter full name.</mat-hint> -->
+                  </mat-form-field>
+                </div>
+                <div>
+                    <button type="submit" class="center" mat-raised-button color="primary">SignUp</button>
+                    &nbsp;
+                    <button type="reset" class="center" mat-raised-button color="accent">Clear</button>
+                </div>
+            </form>
+            
+            </div>
+         
+        </div>
+    </div>
+</div>

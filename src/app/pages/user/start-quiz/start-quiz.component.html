@@ -1,0 +1,113 @@
+<div class="bootstrap-wrapper" *ngIf="!isSubmit">
+    <div class="container ">
+        <div class="row">
+            <h2 style="margin: auto;">On Going {{question[0].quiz.title}} quiz</h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Instructions:</mat-card-title>
+                    </mat-card-header>
+                    <!-- <mat-divider></mat-divider> -->
+                    <mat-card-content>
+                            <li class="mt10"><mat-list-item >Please don't refresh the page.</mat-list-item></li>
+                            <li class="mt10"><mat-list-item >Don't switch the tab.</mat-list-item></li>
+                            <li class="mt10"><mat-list-item >Don't minimize the window.</mat-list-item></li>
+                            <mat-list-item ><b class="mt10">*Otherwise quiz will be auto submitted.</b></mat-list-item>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-8">
+                <div *ngIf="question">
+
+                    <mat-card *ngFor="let q of question, let i=index" class="mb10">
+                        <div class="row">
+                            <mat-card-header>
+                                <mat-card-title>
+                                    <div class="col-md-1 right">Ques{{i+1}}</div>
+                                </mat-card-title>
+                            </mat-card-header>
+                            <div class="col-md-10">
+                                <!-- <mat-card-header> -->
+                                <!-- <mat-card-title [innerHTML]="q.content"></mat-card-title> -->
+                                <!-- </mat-card-header> -->
+                                <mat-card-content>
+                                    <b>Q{{i+1}}</b><span [innerHTML]="q.content"></span>
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                            <p><input [(ngModel)]="q.answervalue" type="radio" [value]="q.option1" name="{{i}}">{{q.option1}}</p>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <p><input [(ngModel)]="q.answervalue" type="radio" name="{{i}}" [value]="q.option2">{{q.option2}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                            <p><input [(ngModel)]="q.answervalue" type="radio" name="{{i}}" [value]="q.option3">{{q.option3}}</p>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <p><input  [(ngModel)]="q.answervalue" type="radio" name="i" [value]="q.option4">{{q.option4}}</p>
+                                        </div>
+                                    </div>
+
+                                </mat-card-content>
+                            </div>
+                        </div>
+
+                    </mat-card>
+                    <!-- /submit button -->
+                    <div class="row center">
+                        <button (click)="submit()"  class="center" mat-raised-button type="submit" color="primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title class="center">Timer</mat-card-title>
+                        <mat-card-subtitle>Quiz will be submitted automatically once times up!</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content >
+                        <mat-card-title  class="center">{{getformattedTimer()}}</mat-card-title>
+                        <mat-spinner style="margin: auto;" mode="determinate" [value]="(timer/(this.question.length*2*60))*100" ></mat-spinner>
+                    </mat-card-content>
+                
+            </mat-card>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- {{question|json}} -->
+<div class="bootstrap-wrapper" *ngIf="isSubmit">
+    <div class="container">
+        <div class="row col-md-6 offset-md-3">
+            <mat-card class="w100 center">
+                <mat-card-header>
+                    <mat-card-title>
+                        Quiz Result
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                        <h3>Marks Got: {{marks}}</h3>
+                        <h3>Correct Answers: {{correctans}}</h3>
+                        <h3>Qurestions Attempted: {{attempted}}</h3>
+                        <h3>Result: {{result}}</h3>
+                </mat-card-content>
+                <mat-divider></mat-divider>
+                <mat-card-actions>
+                    <button (click)="printpage()" mat-raised-button color="primary">Print</button>
+                    <button mat-raised-button color="accent">Home</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

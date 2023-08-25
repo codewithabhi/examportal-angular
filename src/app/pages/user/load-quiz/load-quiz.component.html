@@ -1,0 +1,36 @@
+<!-- <mat-card> -->
+    <div mat-subheader><h1>Quiz</h1></div>
+    <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-card  *ngIf="quiz.length==0">
+        <mat-card-header>
+            <mat-card-title>No Quiz found </mat-card-title>   
+          </mat-card-header>
+    </mat-card>
+    <mat-grid-tile *ngFor="let q of quiz" ><mat-card  class="example-card mr5">
+    
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{q.title}}</mat-card-title>
+          <mat-card-subtitle>Quiz</mat-card-subtitle>
+        </mat-card-header>
+       
+        <mat-card-content>
+          <p class="truncate">
+            {{q.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="mr5" mat-button color="primary">View</button>
+          <button [routerLink]="'/user/instruction/'+q.qId" class="mr5" mat-button color="warn">Start</button>
+            <button class="mr5" mat-button color="primary">M:M {{q.maxMarks}}</button>
+          <button  class="mr5" mat-button color="warn">Q: {{q.noOfQuestions}}</button>
+        </mat-card-actions>
+    
+      </mat-card></mat-grid-tile>
+    
+    
+  </mat-grid-list>
+  <!-- <div class="container center mrb3">
+    <button mat-raised-button routerLink="/admin/add-category" color="primary">Add</button>
+    </div> -->
+<!-- </mat-card> -->
